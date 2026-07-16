@@ -1,8 +1,10 @@
 const { MongoClient } = require("mongodb");
+const dotenv = require("dotenv")
+dotenv.config()
 
-const client = new MongoClient("mongodb+srv://rachitchaudhary_db_user:UBJtxKHYHzVpVW7E@cluster0.knw4byv.mongodb.net/sample_mflix?retryWrites=true&w=majority", {
+const client = new MongoClient(process.env.CONNECTIONSTRING, {
   tlsAllowInvalidCertificates: true
-});
+})
 
 async function run() {
   try {
