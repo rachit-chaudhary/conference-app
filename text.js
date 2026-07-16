@@ -18,45 +18,49 @@ async function startServer() {
 
     app.get("/", async (req, res) => {
       try {
-        const database = client.db("sample_mflix"); 
-        const collection = database.collection("movies");
+        // Updated Database and Collection names
+        const database = client.db("conference_app"); 
+        const collection = database.collection("attendees");
         
-        // Fetch up to 50 movies
+        // Fetch attendees (limiting to 50 to prevent crashing if the list grows)
         const documents = await collection.find({}).limit(50).toArray();
         
-        // Generate an HTML string looping through the documents
+        // Generate an HTML string looping through the attendee documents
         const htmlTemplate = `
           <!DOCTYPE html>
           <html lang="en">
           <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Movie Collection</title>
+            <title>Conference Attendees</title>
             <style>
               body { font-family: Arial, sans-serif; background-color: #f4f4f9; color: #333; padding: 20px; }
               h1 { text-align: center; color: #222; }
-              .movie-list { max-width: 800px; margin: 0 auto; }
-              .movie-card { background: white; margin-bottom: 20px; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: flex; gap: 20px; }
-              .movie-poster { max-width: 150px; object-fit: cover; border-radius: 4px; background: #ddd; display: flex; align-items: center; justify-content: center; text-align: center;}
-              .movie-details h2 { margin-top: 0; margin-bottom: 10px; color: #0056b3; }
-              .movie-details p { margin: 5px 0; line-height: 1.4; }
+              .attendee-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+              .attendee-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: flex; gap: 25px; align-items: center; }
+              .attendee-image { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; background: #eee; border: 1px solid #ddd; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #888; }
+              .attendee-details h2 { margin: 0 0 5px 0; color: #0056b3; }
+              .attendee-details h3 { margin: 0 0 12px 0; font-size: 16px; color: #555; font-weight: normal; }
+              .attendee-details p { margin: 6px 0; line-height: 1.4; font-size: 14px; }
+              .role-badge { display: inline-block; background: #e0e0e0; padding: 3px 8px; border-radius: 12px; font-size: 12px; font-weight: bold; color: #333; margin-bottom: 5px; }
             </style>
           </head>
           <body>
-            <h1>Movie Collection</h1>
-            <div class="movie-list">
-              ${documents.map(movie => `
-                <div class="movie-card">
-                  ${movie.poster 
-                    ? `<img src="${movie.poster}" alt="${movie.title}" class="movie-poster" />` 
-                    : `<div class="movie-poster" style="width: 150px; height: 220px;">No Image</div>`
+            <h1>Conference Attendees</h1>
+            <div class="attendee-list">
+              ${documents.map(attendee => `
+                <div class="attendee-card">
+                  ${attendee.image 
+                    ? `<img src="${attendee.image}" alt="${attendee.name}" class="attendee-image" />` 
+                    : `<div class="attendee-image">No Image</div>`
                   }
-                  <div class="movie-details">
-                    <h2>${movie.title} (${movie.year || 'N/A'})</h2>
-                    <p><strong>Genres:</strong> ${movie.genres ? movie.genres.join(", ") : 'N/A'}</p>
-                    <p><strong>Cast:</strong> ${movie.cast ? movie.cast.join(", ") : 'N/A'}</p>
-                    <p><strong>Plot:</strong> ${movie.plot || 'No plot available.'}</p>
-                    <p><strong>IMDb Rating:</strong> ${movie.imdb && movie.imdb.rating ? movie.imdb.rating : 'N/A'}</p>
+                  <div class="attendee-details">
+                    <h2>${attendee.name || 'Unknown Attendee'}</h2>
+                    ${attendee.role ? `<span class="role-badge">${attendee.role}</span>` : ''}
+                    <h3>${attendee.designation || 'Unknown Title'} at <strong>${attendee.organisation || 'Unknown Organization'}</strong></h3>
+                    
+                    <p><strong>Interests:</strong> ${attendee.interest && attendee.interest.length ? attendee.interest.join(", ") : 'None listed'}</p>
+                    <p><strong>Goals:</strong> ${attendee.goals && attendee.goals.length ? attendee.goals.join(", ") : 'None listed'}</p>
                   </div>
                 </div>
               `).join('')}
@@ -74,7 +78,7 @@ async function startServer() {
     });
 
     app.listen(port, () => {
-      console.log(`Server is running! View your movies at http://localhost:${port}/`);
+      console.log(`Server is running! View attendees at http://localhost:${port}/`);
     });
 
   } catch (err) {
