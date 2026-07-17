@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("includes/head") %>
+
+<body class="onboarding-page">
+
+<main class="onboarding-shell py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-10">
+                <section class="onboarding-header mb-4">
+                    <p class="text-uppercase text-success fw-semibold mb-2">Conference Connect</p>
+                    <h1 class="h2 mb-2">Personalise your networking experience</h1>
+                    <p class="text-muted mb-0">
+                        Select the topics and goals that best match your conference priorities.
+                    </p>
+                </section>
+
+                <form class="onboarding-form needs-validation" action="#" method="POST" novalidate>
+                    <input type="hidden" name="interests" id="selectedInterests">
+                    <input type="hidden" name="goals" id="selectedGoals">
+
+                    <section class="onboarding-panel mb-4" aria-labelledby="interestsHeading">
+                        <div class="d-flex flex-column flex-md-row justify-content-between gap-3 mb-4">
+                            <div>
+                                <span class="badge text-bg-success mb-2">Step 1</span>
+                                <h2 class="h4 mb-1" id="interestsHeading">Choose your interests</h2>
+                                <p class="text-muted mb-0">Select all topics relevant to your work.</p>
+                            </div>
+                            <p class="small text-muted mb-0 align-self-md-end">Multiple selections allowed</p>
+                        </div>
+
+                        <div class="chip-group" data-selection-group="interests" role="group" aria-labelledby="interestsHeading">
+                            <button class="btn interest-chip" type="button" data-value="Power Electronics">Power Electronics</button>
+                            <button class="btn interest-chip" type="button" data-value="E-Mobility">E-Mobility</button>
+                            <button class="btn interest-chip" type="button" data-value="Smart Manufacturing">Smart Manufacturing</button>
+                            <button class="btn interest-chip" type="button" data-value="Energy Storage">Energy Storage</button>
+                            <button class="btn interest-chip" type="button" data-value="Semiconductors">Semiconductors</button>
+                            <button class="btn interest-chip" type="button" data-value="Thermal Management">Thermal Management</button>
+                            <button class="btn interest-chip" type="button" data-value="Grid Infrastructure">Grid Infrastructure</button>
+                            <button class="btn interest-chip" type="button" data-value="Research and Innovation">Research and Innovation</button>
+                        </div>
+
+                        <div class="invalid-feedback d-block mt-3" data-feedback-for="interests">
+                            Please select at least one interest.
+                        </div>
+                    </section>
+
+                    <section class="onboarding-panel mb-4" aria-labelledby="goalsHeading">
+                        <div class="d-flex flex-column flex-md-row justify-content-between gap-3 mb-4">
+                            <div>
+                                <span class="badge text-bg-success mb-2">Step 2</span>
+                                <h2 class="h4 mb-1" id="goalsHeading">Select conference goals</h2>
+                                <p class="text-muted mb-0">Pick the outcomes you want from the event.</p>
+                            </div>
+                            <p class="small text-muted mb-0 align-self-md-end">Multiple selections allowed</p>
+                        </div>
+
+                        <div class="row g-3" data-selection-group="goals">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <button class="goal-card" type="button" data-value="Meet Suppliers">
+                                    <span class="goal-card-title">Meet Suppliers</span>
+                                    <span class="goal-card-text">Find technology partners and solution providers.</span>
+                                </button>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <button class="goal-card" type="button" data-value="Discover Products">
+                                    <span class="goal-card-title">Discover Products</span>
+                                    <span class="goal-card-text">Explore launches, demos and product showcases.</span>
+                                </button>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <button class="goal-card" type="button" data-value="Attend Sessions">
+                                    <span class="goal-card-title">Attend Sessions</span>
+                                    <span class="goal-card-text">Build an agenda around technical presentations.</span>
+                                </button>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <button class="goal-card" type="button" data-value="Find Buyers">
+                                    <span class="goal-card-title">Find Buyers</span>
+                                    <span class="goal-card-text">Connect with prospects and procurement teams.</span>
+                                </button>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <button class="goal-card" type="button" data-value="Recruit Talent">
+                                    <span class="goal-card-title">Recruit Talent</span>
+                                    <span class="goal-card-text">Meet engineers, researchers and industry specialists.</span>
+                                </button>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <button class="goal-card" type="button" data-value="Build Partnerships">
+                                    <span class="goal-card-title">Build Partnerships</span>
+                                    <span class="goal-card-text">Identify collaboration and market expansion opportunities.</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="invalid-feedback d-block mt-3" data-feedback-for="goals">
+                            Please select at least one conference goal.
+                        </div>
+                    </section>
+
+                    <div class="d-flex flex-column flex-sm-row justify-content-end gap-3">
+                        <a href="/" class="btn btn-outline-secondary px-4">Back</a>
+                        <button class="btn btn-success px-4" type="submit">Continue</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="/js/onboarding.js"></script>
+<%- include("includes/footer") %>
+
+</body>
+</html>
