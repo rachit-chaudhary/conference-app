@@ -279,6 +279,7 @@
     "yallist": "^3.1.1"
   },
   "scripts": {
+    "start": "node db.js",
     "watch": "nodemon db.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
