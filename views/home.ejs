@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("includes/head") %>
+
+<body class="home-page">
+
+<%- include("includes/navbar") %>
+
+
+<main class="home-shell py-4 py-lg-5">
+    <div class="container px-3 px-lg-4">
+        <section class="home-welcome mb-4" aria-labelledby="homeHeading">
+            <div class="row align-items-end g-3">
+                <div class="col-12 col-lg-7">
+                    <p class="text-uppercase text-success fw-semibold mb-2">Delegate dashboard</p>
+                    <h1 class="h2 mb-2" id="homeHeading">Today at the conference</h1>
+                    <p class="text-muted mb-0">Track oral presentations, meet relevant attendees and stay current with event updates.</p>
+                </div>
+                <div class="col-12 col-lg-5 text-lg-end">
+                    <span class="badge text-bg-light border px-3 py-2">Thursday, 10 December</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="row g-4 align-items-start">
+            <div class="col-12 col-xl-8">
+                <section class="home-panel mb-4" aria-labelledby="scheduleHeading">
+                    <div class="d-flex flex-column flex-md-row justify-content-between gap-2 mb-3">
+                        <div>
+                            <h2 class="h4 mb-1" id="scheduleHeading">Today's schedule</h2>
+                            <p class="text-muted mb-0">Oral session presentations</p>
+                        </div>
+                        <a class="btn btn-outline-secondary btn-sm align-self-md-start" href="#">View full agenda</a>
+                    </div>
+
+                    <div class="list-group schedule-list">
+                        <article class="list-group-item schedule-item">
+                            <div class="schedule-time">09:30</div>
+                            <div class="schedule-content">
+                                <h3 class="h6 mb-1">Wide Bandgap Devices for High Efficiency Power Conversion</h3>
+                                <p class="mb-2 text-muted">Hall 4A, Technical Forum</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge rounded-pill text-bg-success">Oral Session</span>
+                                    <span class="badge rounded-pill text-bg-light border">Power Electronics</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="list-group-item schedule-item">
+                            <div class="schedule-time">11:00</div>
+                            <div class="schedule-content">
+                                <h3 class="h6 mb-1">Thermal Design Strategies for Compact Inverters</h3>
+                                <p class="mb-2 text-muted">Hall 5, Innovation Stage</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge rounded-pill text-bg-success">Oral Session</span>
+                                    <span class="badge rounded-pill text-bg-light border">Thermal Management</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="list-group-item schedule-item">
+                            <div class="schedule-time">14:15</div>
+                            <div class="schedule-content">
+                                <h3 class="h6 mb-1">Grid Connected Storage Systems and Converter Reliability</h3>
+                                <p class="mb-2 text-muted">Conference Room B</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge rounded-pill text-bg-success">Oral Session</span>
+                                    <span class="badge rounded-pill text-bg-light border">Energy Storage</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="list-group-item schedule-item">
+                            <div class="schedule-time">16:00</div>
+                            <div class="schedule-content">
+                                <h3 class="h6 mb-1">Next Generation Charging Infrastructure for E-Mobility</h3>
+                                <p class="mb-2 text-muted">Hall 4A, Technical Forum</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge rounded-pill text-bg-success">Oral Session</span>
+                                    <span class="badge rounded-pill text-bg-light border">E-Mobility</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="home-panel" aria-labelledby="exhibitorHeading">
+                    <div class="d-flex flex-column flex-md-row justify-content-between gap-2 mb-3">
+                        <div>
+                            <h2 class="h4 mb-1" id="exhibitorHeading">Exhibitors</h2>
+                            <p class="text-muted mb-0">Featured companies on the show floor</p>
+                        </div>
+                        <a class="btn btn-outline-secondary btn-sm align-self-md-start" href="#">Explore exhibitors</a>
+                    </div>
+
+                    <div class="exhibitor-slider" aria-label="Featured exhibitor logos">
+                        <div class="exhibitor-track">
+                            <div class="exhibitor-logo">Infineon</div>
+                            <div class="exhibitor-logo">Wolfspeed</div>
+                            <div class="exhibitor-logo">ROHM</div>
+                            <div class="exhibitor-logo">Semikron</div>
+                            <div class="exhibitor-logo">Vincotech</div>
+                            <div class="exhibitor-logo">Mitsubishi Electric</div>
+                            <div class="exhibitor-logo">Infineon</div>
+                            <div class="exhibitor-logo">Wolfspeed</div>
+                            <div class="exhibitor-logo">ROHM</div>
+                            <div class="exhibitor-logo">Semikron</div>
+                            <div class="exhibitor-logo">Vincotech</div>
+                            <div class="exhibitor-logo">Mitsubishi Electric</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="col-12 col-xl-4">
+                <section class="home-panel mb-4" aria-labelledby="peopleHeading">
+                    <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                        <div>
+                            <h2 class="h4 mb-1" id="peopleHeading">Recommended people</h2>
+                            <p class="text-muted mb-0">Other attendees from your organisation</p>
+                        </div>
+                    </div>
+
+                    <div class="recommended-list">
+                        <article class="person-row">
+                            <div class="person-avatar" aria-hidden="true">AK</div>
+                            <div>
+                                <h3 class="h6 mb-1">Anika Keller</h3>
+                                <p class="text-muted mb-1">Senior Application Engineer</p>
+                                <span class="badge text-bg-light border">Power Modules</span>
+                            </div>
+                        </article>
+
+                        <article class="person-row">
+                            <div class="person-avatar" aria-hidden="true">MS</div>
+                            <div>
+                                <h3 class="h6 mb-1">Martin Stein</h3>
+                                <p class="text-muted mb-1">Procurement Lead</p>
+                                <span class="badge text-bg-light border">Supplier Meetings</span>
+                            </div>
+                        </article>
+
+                        <article class="person-row">
+                            <div class="person-avatar" aria-hidden="true">NP</div>
+                            <div>
+                                <h3 class="h6 mb-1">Nisha Patel</h3>
+                                <p class="text-muted mb-1">Research Manager</p>
+                                <span class="badge text-bg-light border">Innovation Forum</span>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="home-panel" aria-labelledby="announcementsHeading">
+                    <h2 class="h4 mb-3" id="announcementsHeading">Announcements</h2>
+
+                    <div class="announcement-list">
+                        <article class="announcement-item border-start border-success border-4">
+                            <h3 class="h6 mb-1">Registration desk extended hours</h3>
+                            <p class="text-muted mb-0">Badge support is available in the foyer until 18:30 today.</p>
+                        </article>
+
+                        <article class="announcement-item border-start border-success border-4">
+                            <h3 class="h6 mb-1">Room update for afternoon session</h3>
+                            <p class="text-muted mb-0">The 14:15 storage systems session has moved to Conference Room B.</p>
+                        </article>
+
+                        <article class="announcement-item border-start border-success border-4">
+                            <h3 class="h6 mb-1">Networking reception</h3>
+                            <p class="text-muted mb-0">Join fellow delegates in Hall 6 from 17:30.</p>
+                        </article>
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </div>
+</main>
+
+<a class="mobile-search-button btn btn-success d-md-none" href="#" aria-label="Search attendees, sessions or exhibitors">Search</a>
+
+<%- include("includes/footer") %>
+
+</body>
+</html>
+
+

@@ -1,0 +1,47 @@
+<header class="event-navbar border-bottom bg-white">
+    <nav class="navbar navbar-expand-xl container-xxl px-3 px-lg-4" aria-label="Primary navigation">
+        <a class="navbar-brand event-navbar-brand" href="/home">
+            <img src="/images/pcim_logo.png" alt="PCIM" class="event-navbar-logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNavbar" aria-controls="primaryNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="primaryNavbar">
+            <ul class="navbar-nav me-auto mb-3 mb-xl-0 event-navbar-menu">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/presentations">Presentations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/attendees">Attendees</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/organisations">Organisations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career-board">Career Board</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/inbox">Inbox</a>
+                </li>
+            </ul>
+
+            <form class="home-search d-none d-md-flex me-xl-3" action="#" method="GET" role="search">
+                <label class="visually-hidden" for="desktopSearch">Search attendees, sessions or exhibitors</label>
+                <input class="form-control" id="desktopSearch" type="search" name="query" placeholder="Search attendees, sessions or exhibitors">
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+
+            <div class="event-navbar-actions d-flex align-items-center gap-2">
+                <a class="btn btn-outline-secondary notification-button" href="/notifications" aria-label="Notifications">
+                    <span aria-hidden="true">&#128276;</span>
+                </a>
+                <a class="btn btn-success profile-button" href="/profile" aria-label="Profile">Profile</a>
+            </div>
+        </div>
+    </nav>
+</header>
