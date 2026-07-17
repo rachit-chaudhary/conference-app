@@ -1,0 +1,73 @@
+body {
+    background: #f7f8fa;
+    background: red;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.guest-wrapper {
+    background: RED;
+}
+
+.kv-background {
+    position: fixed;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.login-left {
+    background: linear-gradient(135deg,
+            var(--primary),
+            var(--primary-strong));
+
+    color: #fff;
+}
+
+.login-brand {
+    max-width: 500px;
+    padding: 60px;
+}
+
+.login-brand h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 470px;
+    background: #fff;
+    padding: 50px;
+    border-radius: 16px;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(0, 157, 122, 0.2);
+    outline: none;
+}
+
+.form-control {
+    height: 52px;
+    border-radius: 8px;
+}
+
+.btn-success {
+    background: var(--primary);
+    border: none;
+}
+
+.btn-success:hover {
+    background: var(--primary-strong);
+}
+
+@media(max-width:991px) {
+    .login-card {
+        margin: 40px 20px;
+        padding: 35px;
+    }
+
+}

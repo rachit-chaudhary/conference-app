@@ -1,0 +1,30 @@
+:root{
+  --bg: #f9fafb;                          /* off-white background */
+  --muted: #7A868D;                       /* gray-500 */
+  --text: #111827;
+  --Sekundärschwarz: #575F65;
+  --Primärschwarz: #7A868D;
+  --primary-light: #06b992;               /* primary color --light */
+  --primary: #009D7A;                     /* primary color */
+  --primary-strong: #008B6A;              /* primary color --strong */
+  --accent: #117ca2;                      /* emerald */
+  --ring: rgba(14,165,233,.35);
+  --border: #e5e7eb;                      /* gray-200 */
+  --shadow: 0 6px 16px rgba(0,0,0,.08);
+  --radius: 12px;
+}
+
+@font-face {
+  font-family: 'MesseUnivers-Regular';
+  src: url("../fonts/MesseUnivers-Regular.otf");
+}
+
+@font-face {
+  font-family: 'MesseUnivers-Light';
+  src: url("../fonts/MesseUnivers-Light.otf");
+}
+
+@font-face {
+  font-family: 'MesseUnivers-Bold';
+  src: url("../fonts/MesseUnivers-Bold.otf");
+}

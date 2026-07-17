@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("includes/head") %>
+
+<body class="bg-light">
+
+<div class="container-fluid min-vh-100">
+    
+    <video autoplay muted loop id="kvBackground" class="kv-background">
+        <source src="/images/pcim-kv-animation.mp4" type="video/mp4">
+    </video>
+
+    <div class="row min-vh-100">
+        <!-- LEFT PANEL -->
+        <div class="col-lg-4 d-none d-lg-flex align-items-center justify-content-center login-left">
+
+            <div class="login-brand">
+                <img src="/images/pcim_logo_white.png" class="mb-5" width="220">
+
+                <h1 class="display-5 mb-4"> Conference Connect </h1>
+
+                <p class="lead">
+                    Connect with delegates, speakers, exhibitors and organisers through one unified conference platform.
+                </p>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="col-lg-8 d-flex align-items-center justify-content-center">
+
+            <div class="login-card shadow-sm">
+                <h2 class="mb-2">
+                    Welcome
+                </h2>
+                <p class="text-muted mb-4">
+                    Sign in using credentials provided by the organisers.
+                </p>
+
+                <form action="/login" method="POST">
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Username
+                        </label>
+                        <input class="form-control" type="text" name="username" autocomplete="off" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label"> Password </label>
+                        <input class="form-control" type="password" name="password" required>
+
+                    </div>
+
+                    <button class="btn btn-success w-100 py-3"> Sign In </button>
+
+                </form>
+
+                <hr class="my-4">
+
+                <small class="text-muted"> Need access? <br>
+                    User accounts are created only by the conference organising team.
+                    <br><br>
+                    Contact:
+                    <a href="mailto:support@conference.com">
+                        support@conference.com
+                    </a>
+                </small>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include("includes/footer") %>
+
+</body>
+</html>
